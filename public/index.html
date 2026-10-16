@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Watch Party</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Landing -->
+  <section id="landing" class="landing">
+    <div class="card">
+      <h1>🍿 Watch Party</h1>
+      <p class="muted">Watch together, in sync. Create a room or join one with a code.</p>
+      <label>Your name <input id="nameInput" maxlength="24" placeholder="e.g. Akshita" /></label>
+      <div class="row">
+        <input id="roomNameInput" maxlength="60" placeholder="Room name (optional)" />
+        <button id="createBtn" class="primary">Create room</button>
+      </div>
+      <div class="divider">or</div>
+      <div class="row">
+        <input id="codeInput" maxlength="6" placeholder="Room code" style="text-transform:uppercase" />
+        <button id="joinBtn">Join</button>
+      </div>
+      <p id="landingError" class="error"></p>
+    </div>
+  </section>
+
+  <!-- Room -->
+  <section id="roomView" class="room hidden">
+    <header class="topbar">
+      <div>
+        <strong id="roomTitle">Room</strong>
+        <span class="code-pill" id="codePill" title="Click to copy invite link"></span>
+      </div>
+      <div class="status">
+        <span id="connStatus" class="dot ok" title="Connection"></span>
+        <span id="syncBadge" class="badge">sync —</span>
+        <button id="copyLinkBtn" class="small">Copy invite link</button>
+        <button id="leaveBtn" class="small ghost">Leave</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <div class="stage">
+        <div class="player" id="player">
+          <video id="video" playsinline preload="auto"></video>
+          <div class="empty" id="emptyState">
+            <p>No video yet.</p>
+            <p class="muted">Pick something from <b>Discover</b> or paste a video link.</p>
+          </div>
+          <div class="overlay hidden" id="unmuteOverlay"><button class="primary" id="resumeBtn">▶ Click to join playback</button></div>
+          <div class="float-layer" id="floatLayer"></div>
+          <div class="buffering hidden" id="bufferingTag">buffering…</div>
+        </div>
+
+        <div class="controls">
+          <button id="playBtn" class="icon" title="Play/Pause">▶</button>
+          <span id="timeLabel" class="time">0:00 / 0:00</span>
+          <div class="timeline" id="timeline">
+            <div class="heat" id="heat"></div>
+            <div class="progress" id="progress"></div>
+            <div class="knob" id="knob"></div>
+          </div>
+          <select id="rateSelect" title="Playback speed">
+            <option value="0.5">0.5×</option><option value="0.75">0.75×</option><option value="1" selected>1×</option>
+            <option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option>
+          </select>
+          <button id="muteBtn" class="icon" title="Mute">🔊</button>
+        </div>
+        <div class="control-note" id="controlNote"></div>
+
+        <div class="reactions" id="reactionBar"></div>
+        <div class="now" id="nowPlaying"></div>
+
+        <form class="urlform" id="urlForm">
+          <input id="urlInput" placeholder="Paste a direct video link (.mp4 / .webm)…" />
+          <button type="submit" class="small">Play now</button>
+          <button type="button" class="small ghost" id="queueUrlBtn">Add to playlist</button>
+        </form>
+      </div>
+
+      <aside class="side">
+        <nav class="tabs" id="tabs">
+          <button data-tab="chat" class="active">Chat</button>
+          <button data-tab="discover">Discover</button>
+          <button data-tab="playlist">Playlist <span id="plCount" class="count"></span></button>
+          <button data-tab="polls">Polls</button>
+          <button data-tab="people">People <span id="peopleCount" class="count"></span></button>
+        </nav>
+
+        <div class="pane" data-pane="chat">
+          <ul class="chat" id="chatList"></ul>
+          <form id="chatForm" class="chatform">
+            <input id="chatInput" maxlength="500" placeholder="Say something…" autocomplete="off" />
+            <button class="small primary">Send</button>
+          </form>
+        </div>
+
+        <div class="pane hidden" data-pane="discover">
+          <input id="searchInput" placeholder="Fuzzy search: try “sintl” or “robot”" />
+          <div class="filters">
+            <select id="catFilter"><option value="">All categories</option></select>
+            <select id="genreFilter"><option value="">All genres</option></select>
+            <select id="lenFilter">
+              <option value="">Any length</option><option value="short">Under 2 min</option><option value="mid">2–10 min</option><option value="long">Over 10 min</option>
+            </select>
+            <select id="sortFilter"><option value="relevance">Best match</option><option value="rating">Top rated</option><option value="year">Newest</option></select>
+          </div>
+          <h4 id="recTitle">Recommended for this room</h4>
+          <div class="cards" id="recList"></div>
+          <h4>All titles <span class="muted" id="resultCount"></span></h4>
+          <div class="cards" id="movieList"></div>
+        </div>
+
+        <div class="pane hidden" data-pane="playlist">
+          <p class="muted small-text">Everyone can add and upvote. The host plays what's next.</p>
+          <ul class="list" id="playlist"></ul>
+          <button class="small" id="playNextBtn">▶ Play top-voted</button>
+        </div>
+
+        <div class="pane hidden" data-pane="polls">
+          <form id="pollForm" class="pollform">
+            <input id="pollQ" maxlength="140" placeholder="Question, e.g. What next?" />
+            <input id="pollOpts" placeholder="Options, comma separated" />
+            <button class="small primary">Start poll</button>
+            <button type="button" class="small ghost" id="pollFromPlaylist">Poll from playlist</button>
+          </form>
+          <div id="pollList"></div>
+        </div>
+
+        <div class="pane hidden" data-pane="people">
+          <div class="host-tools" id="hostTools">
+            <label><input type="checkbox" id="everyoneToggle" /> Let everyone control playback</label>
+          </div>
+          <ul class="list" id="peopleList"></ul>
+          <p class="muted small-text">Drift = how far each viewer is from the room's clock. Green ≤ 250 ms, amber ≤ 500 ms.</p>
+        </div>
+      </aside>
+    </main>
+  </section>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/fuzzy.js"></script>
+  <script src="/sync.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

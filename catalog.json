@@ -1,0 +1,253 @@
+[
+ {
+  "id": "local-test-pattern",
+  "title": "Sync Test Pattern (offline)",
+  "url": "/videos/sample.webm",
+  "year": 2026,
+  "category": "Short",
+  "genres": [
+   "Test"
+  ],
+  "duration": 120,
+  "rating": 3.0,
+  "description": "A local 2-minute test card with a running counter. Works without internet; great for checking sync.",
+  "tags": [
+   "offline",
+   "test"
+  ]
+ },
+ {
+  "id": "big-buck-bunny",
+  "title": "Big Buck Bunny",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+  "year": 2008,
+  "category": "Animation",
+  "genres": [
+   "Comedy",
+   "Family"
+  ],
+  "duration": 596,
+  "rating": 4.3,
+  "description": "A giant rabbit takes gentle revenge on three bullying rodents.",
+  "tags": [
+   "funny",
+   "light"
+  ]
+ },
+ {
+  "id": "elephants-dream",
+  "title": "Elephants Dream",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+  "year": 2006,
+  "category": "Animation",
+  "genres": [
+   "Sci-Fi",
+   "Surreal"
+  ],
+  "duration": 653,
+  "rating": 3.6,
+  "description": "Two men explore a strange machine-like world that may be in their heads.",
+  "tags": [
+   "weird",
+   "dark"
+  ]
+ },
+ {
+  "id": "sintel",
+  "title": "Sintel",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+  "year": 2010,
+  "category": "Animation",
+  "genres": [
+   "Fantasy",
+   "Adventure",
+   "Drama"
+  ],
+  "duration": 888,
+  "rating": 4.5,
+  "description": "A lonely girl searches the world for the baby dragon she raised.",
+  "tags": [
+   "emotional",
+   "epic"
+  ]
+ },
+ {
+  "id": "tears-of-steel",
+  "title": "Tears of Steel",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+  "year": 2012,
+  "category": "Live Action",
+  "genres": [
+   "Sci-Fi",
+   "Action"
+  ],
+  "duration": 734,
+  "rating": 3.9,
+  "description": "Scientists in Amsterdam try to rescue the world from destructive robots.",
+  "tags": [
+   "action",
+   "futuristic"
+  ]
+ },
+ {
+  "id": "for-bigger-blazes",
+  "title": "For Bigger Blazes",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+  "year": 2013,
+  "category": "Short",
+  "genres": [
+   "Action"
+  ],
+  "duration": 15,
+  "rating": 3.2,
+  "description": "A fast, fiery 15-second spot.",
+  "tags": [
+   "quick",
+   "action"
+  ]
+ },
+ {
+  "id": "for-bigger-escapes",
+  "title": "For Bigger Escapes",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+  "year": 2013,
+  "category": "Short",
+  "genres": [
+   "Adventure",
+   "Travel"
+  ],
+  "duration": 15,
+  "rating": 3.3,
+  "description": "Escape to the big screen in 15 seconds.",
+  "tags": [
+   "quick",
+   "travel"
+  ]
+ },
+ {
+  "id": "for-bigger-fun",
+  "title": "For Bigger Fun",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+  "year": 2013,
+  "category": "Short",
+  "genres": [
+   "Comedy"
+  ],
+  "duration": 60,
+  "rating": 3.4,
+  "description": "One minute of fun on the big screen.",
+  "tags": [
+   "quick",
+   "funny"
+  ]
+ },
+ {
+  "id": "for-bigger-joyrides",
+  "title": "For Bigger Joyrides",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+  "year": 2013,
+  "category": "Short",
+  "genres": [
+   "Action",
+   "Adventure"
+  ],
+  "duration": 15,
+  "rating": 3.1,
+  "description": "A short joyride, made for big screens.",
+  "tags": [
+   "quick",
+   "action"
+  ]
+ },
+ {
+  "id": "for-bigger-meltdowns",
+  "title": "For Bigger Meltdowns",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+  "year": 2013,
+  "category": "Short",
+  "genres": [
+   "Comedy",
+   "Drama"
+  ],
+  "duration": 15,
+  "rating": 3.0,
+  "description": "A meltdown worth watching on a bigger screen.",
+  "tags": [
+   "quick",
+   "funny"
+  ]
+ },
+ {
+  "id": "subaru-outback",
+  "title": "Subaru Outback On Street And Dirt",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+  "year": 2014,
+  "category": "Documentary",
+  "genres": [
+   "Cars",
+   "Review"
+  ],
+  "duration": 594,
+  "rating": 3.5,
+  "description": "A car review on tarmac and dirt tracks.",
+  "tags": [
+   "cars",
+   "chill"
+  ]
+ },
+ {
+  "id": "vw-gti-review",
+  "title": "Volkswagen GTI Review",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
+  "year": 2014,
+  "category": "Documentary",
+  "genres": [
+   "Cars",
+   "Review"
+  ],
+  "duration": 570,
+  "rating": 3.6,
+  "description": "An enthusiast's take on the hot hatch classic.",
+  "tags": [
+   "cars",
+   "chill"
+  ]
+ },
+ {
+  "id": "bullrun",
+  "title": "We Are Going On Bullrun",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+  "year": 2014,
+  "category": "Documentary",
+  "genres": [
+   "Cars",
+   "Adventure",
+   "Travel"
+  ],
+  "duration": 47,
+  "rating": 3.4,
+  "description": "Gearing up for a cross-country rally.",
+  "tags": [
+   "cars",
+   "travel"
+  ]
+ },
+ {
+  "id": "car-for-a-grand",
+  "title": "What Car Can You Get For A Grand?",
+  "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+  "year": 2014,
+  "category": "Documentary",
+  "genres": [
+   "Cars",
+   "Comedy"
+  ],
+  "duration": 610,
+  "rating": 3.7,
+  "description": "A light-hearted hunt for the best car under a thousand.",
+  "tags": [
+   "cars",
+   "funny"
+  ]
+ }
+]

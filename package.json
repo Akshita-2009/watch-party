@@ -1,0 +1,20 @@
+{
+  "name": "watch-party",
+  "version": "1.0.0",
+  "description": "Real-time watch party with synced playback, chat, reactions, polls, shared playlists and movie discovery",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node scripts/loadtest.js 12 300",
+    "test:drift": "node scripts/drift-sim.js",
+    "test:load50": "node scripts/loadtest.js 50 100"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.22.3",
+    "socket.io": "^4.8.4"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.4"
+  }
+}
